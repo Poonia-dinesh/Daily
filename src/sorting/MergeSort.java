@@ -6,7 +6,6 @@ import java.util.Arrays;
 public class MergeSort {
     public static void main(String[] args){
         int arr[] = {9,4,7,6,3,1,5};
-
         int[] ansarr = new int[arr.length];
         mergeSort(ansarr,arr, 0, arr.length-1);
         for(int a : arr) System.out.println(a);
