@@ -1,3 +1,5 @@
+package singleDesign;
+
 public class SingletonDesignPattern {
 
     // Lazily
@@ -5,7 +7,7 @@ public class SingletonDesignPattern {
     private static SingletonDesignPattern obj;
 
     // Eager
-    // private static  SingletonDesignPattern obj = new SingletonDesignPattern();
+    // private static  singleDesign.SingletonDesignPattern obj = new singleDesign.SingletonDesignPattern();
 
     private SingletonDesignPattern()
     {

@@ -1,3 +1,5 @@
+import singleDesign.SingletonDesignPattern;
+
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 

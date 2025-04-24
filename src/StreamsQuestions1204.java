@@ -116,8 +116,8 @@ public class StreamsQuestions1204 {
 
         Employee e1 = new Employee("it", 100, "raj");
         Employee e2 = new Employee("it", 200, "aaj");
-        Employee e3 = new Employee("hr", 70, "kaj");
-        Employee e4 = new Employee("hr", 80, "taj");
+        Employee e3 = new Employee("hr", 70, "zurel");
+        Employee e4 = new Employee("hr", 80, "aman");
         Employee e5 = new Employee("it", 70, "naj");
 
         List<Employee> employees = Arrays.asList(e1, e2, e3, e4, e5);
@@ -139,6 +139,11 @@ public class StreamsQuestions1204 {
 
         System.out.println(words.stream().collect(Collectors.toMap(k -> k, v -> 1, Integer::sum)));
 
+        System.out.println("Employees with hr department ");
+        List<Employee> allhrunshorted   =employees.stream().filter(emp -> emp.department.equalsIgnoreCase("hr")).collect(Collectors.toList());
+        System.out.println(allhrunshorted);
+    List<Employee> allhrsorted =     employees.stream().filter(emp -> emp.department.equalsIgnoreCase("hr")).sorted((empl, empl2) -> empl.name.compareTo(empl2.name)).collect(Collectors.toList());
+        System.out.println(allhrsorted);
 
     }
 
@@ -166,6 +171,9 @@ class Employee{
         this.department = department;
         Salary = salary;
         this.name = name;
+    }
+    public String toString(){
+        return "department : " + department + "\n name : " + name + "\nsalary : " + this.Salary;
     }
 
 }
